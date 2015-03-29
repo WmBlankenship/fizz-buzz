@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using NumberTranslator;
 
@@ -17,12 +18,15 @@ namespace FizzBuzz {
             }
         }
 
-        private static Translator FizzBuzzTranslator() {
-            var rules = new List<TranslationRule> {
-                new TranslationRule {Factor = 3, Translation = "Fizz"},
-                new TranslationRule {Factor = 5, Translation = "Buzz"}
-            };
-            return new Translator(rules);
+        private static Translator FizzBuzzTranslator()
+        {
+            var ruleImport = GetRuleImport();
+            return new Translator(ruleImport);
+        }
+
+        private static List<TranslationRule> GetRuleImport()
+        {
+            return RuleApi.GetAllRules().ToList();
         }
     }
 }

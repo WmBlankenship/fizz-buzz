@@ -1,7 +1,6 @@
-﻿using System;
-using System.Linq;
+﻿using NumberTranslator;
+using System;
 using System.Collections.Generic;
-using NumberTranslator;
 
 namespace FizzBuzz {
     class Program {
@@ -26,7 +25,7 @@ namespace FizzBuzz {
 
         private static List<TranslationRule> GetRuleImport()
         {
-            return RuleApi.GetAllRules().ToList();
+            return RuleApi.GetAllRules();
         }
     }
 }

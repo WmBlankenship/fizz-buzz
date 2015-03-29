@@ -1,24 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace NumberTranslator
 {
     public class RuleApi
     {
-        public static IEnumerable<TranslationRule> GetAllRules()
+        public static List<TranslationRule> GetAllRules()
         {
-            yield return new TranslationRule
+            return new List<TranslationRule>
             {
-                Factor = 3,
-                Translation = "Fizz"
-            };
-            yield return new TranslationRule
-            {
-                Factor = 5,
-                Translation = "Buzz"
+                new TranslationRule { Factor = 3, Translation = "Fizz" },
+                new TranslationRule { Factor = 5, Translation = "Buzz" }
             };
         }
     }

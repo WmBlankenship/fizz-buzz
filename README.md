@@ -1,5 +1,5 @@
 # fizz-buzz
-Sample FizzBuzz project'
+Sample FizzBuzz project
 
 Written by Todd Ropog
 Forked by WmBlankenship for experimentation

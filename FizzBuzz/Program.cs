@@ -17,8 +17,7 @@ namespace FizzBuzz {
             }
         }
 
-        private static Translator FizzBuzzTranslator()
-        {
+        private static Translator FizzBuzzTranslator() {
             var translationRules = RuleApi.GetAllRules();
             return new Translator(translationRules);
         }
